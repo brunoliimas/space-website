@@ -21,7 +21,7 @@ export default function Header() {
 
     return (
         <header className="w-full my-10 fixed top-0 left-0 z-50">
-            <div className="container px-6 md:pr-0 2xl:pl-0 flex items-center justify-between">
+            <div className="container px-6 md:pr-0 flex items-center justify-between">
                 <Link href="/">
                     <Image
                         src="/space-logo.svg"
