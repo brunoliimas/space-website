@@ -44,7 +44,7 @@ export default function Header() {
                                 : "border-gray-300"
                                 }`}
                         >
-                            <span className="hidden lg:block mr-2 font-bold">0{index}</span>
+                            <span className="hidden lg:inline-block mr-2 font-bold">0{index}</span>
                             {link.name}
                         </Link>
                     ))}
