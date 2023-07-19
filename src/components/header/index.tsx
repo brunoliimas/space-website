@@ -32,7 +32,7 @@ export default function Header() {
                 </Link>
                 <nav
                     className={
-                        `hidden ${styles.nav} md:flex items-center bg-gray-sky bg-opacity-20 space-x-6 px-16 lg:space-x-12 pt-10 lg:px-32 before:hidden xl:before:block before:absolute before:top-1/2 before:left-[-65%] lg:before:w-9/12 before:h-[1px] before:bg-white`
+                        `hidden ${styles.nav} md:flex items-center md:bg-sky-950 lg:bg-gray-sky md:bg-opacity-20 lg:bg-opacity-20 space-x-6 px-16 lg:space-x-12 pt-10 lg:px-32 before:hidden xl:before:block before:absolute before:top-1/2 before:left-[-65%] lg:before:w-9/12 before:h-[1px] before:bg-white`
                     }
                 >
                     {links.map((link, index) => (
@@ -44,7 +44,7 @@ export default function Header() {
                                 : "border-gray-300"
                                 }`}
                         >
-                            <span className="mr-2 font-bold">0{index}</span>
+                            <span className="hidden lg:block mr-2 font-bold">0{index}</span>
                             {link.name}
                         </Link>
                     ))}

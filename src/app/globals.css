@@ -4,10 +4,9 @@
 @tailwind utilities;
 
 
-/* body {
-    font-family: 'Barlow', sans-serif;
-    background-color: cornflowerblue;
-} */
+body {
+    background-color: #000000;
+}
 @layer base {
     html {
         font-family: 'Barlow', system-ui, sans-serif;
