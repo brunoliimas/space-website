@@ -2,11 +2,7 @@ import { Tabs } from "@/components/destination/tabs"
 import { links } from "@/components/header/links"
 
 
-type DestinationProps = {
-    title: string
-}
-
-export default function Destination({ title }: DestinationProps) {
+export default function Destination() {
     return (
         <>
             <section className='h-screen w-full bg-destination-pattern bg-cover bg-no-repeat bg-center'>
