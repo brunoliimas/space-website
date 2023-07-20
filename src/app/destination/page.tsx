@@ -5,7 +5,7 @@ import { links } from "@/components/header/links"
 export default function Destination() {
     return (
         <>
-            <section className='h-screen w-full bg-destination-pattern bg-cover bg-no-repeat bg-center'>
+            <section className='lg:h-screen w-full bg-destination-pattern bg-cover bg-no-repeat bg-center'>
                 <div className="container h-full flex flex-col items-center pb-24 pt-28">
                     <div className="flex space-x-1 font-barlow-condensed tracking-wider text-base mb-8">
                         <span className="text-white opacity-20">{links[1].index}</span>
