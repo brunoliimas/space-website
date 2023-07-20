@@ -2,19 +2,23 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-type TabData = {
+interface TabData {
     title: string;
     UrlImage: string;
     text: string;
     info: string[];
-};
+}
 
-type TabsProps = {
+interface TabsProps {
     tabsData: TabData[];
-};
+}
 
-const TabInfo: React.FC<{ info: string[] }> = ({ info }) => (
-    <div className='flex flex-col md:flex-row justify-around border-t border-t-blue-sky/20 w-full mt-4'>
+interface TabInfoProps {
+    info: string[]
+}
+
+const TabInfo = ({ info }: TabInfoProps) => (
+    <div className='flex flex-col justify-around border-t border-t-blue-sky/20 w-full mt-4 md:flex-row lg:justify-start lg:space-x-16'>
         {info.map((item, index) => (
             <div key={index} className='mt-4'>
                 <span className='font-barlow-condensed uppercase text-xs md:text-sm text-blue-sky tracking-midllewider'>
@@ -33,42 +37,45 @@ export const Tabs = ({ tabsData }: TabsProps) => {
         setActiveTab(tabNumber);
     };
 
+    const activeTabData = tabsData[activeTab];
+
     return (
         <>
-            <div className='flex justify-center items-center mb-8 space-x-8'>
-                {tabsData.map((tab, index) => (
-                    <button
-                        key={index}
-                        className={`${activeTab === index ? 'border-b-4 border-b-white' : ''
-                            } pb-2 transition-all duration-500 text-white uppercase font-barlow-condensed tracking-midllewider hover:border-b-4`}
-                        onClick={() => handleTabClick(index)}
-                    >
-                        {tab.title}
-                    </button>
-                ))}
-            </div>
-            {tabsData.map((tab, index) => (
-                <div key={index} className={activeTab === index ? '' : 'hidden'}>
-                    <div className='flex flex-col items-center justify-center px-8 lg:flex-row lg:space-x-10'>
-                        <div className='w-full flex items-center justify-center mb-12'>
-                            <Image
-                                className='drop-shadow-xl'
-                                src={tab.UrlImage}
-                                width={170}
-                                height={170}
-                                alt='Imagem hero'
-                            />
-                        </div>
-                        <div className='w-4/5 flex flex-col items-center justify-center text-center lg:text-left'>
-                            <div className='space-y-2 mb-10'>
-                                <h2 className='font-bellefair text-6xl text-white uppercase'>{tab.title}</h2>
-                                <p className='text-sm md:text-base text-blue-sky min-h-24'>{tab.text}</p>
-                            </div>
-                            <TabInfo info={tab.info} />
-                        </div>
-                    </div>
+            <div className='flex flex-col items-center justify-center px-8 lg:flex-row lg:space-x-10'>
+                <div className='w-full flex items-center justify-center mb-12'>
+                    <Image
+                        className='drop-shadow-2xl w-80'
+                        src={activeTabData.UrlImage}
+                        width={170}
+                        height={170}
+                        alt='Imagem hero'
+                    />
                 </div>
-            ))}
+                <div className='md:w-4/5 flex flex-col items-center lg:items-start justify-center text-center lg:text-left'>
+                    <div className='flex justify-center lg:justify-start items-center mb-8 space-x-8'>
+                        {tabsData.map((tab, index) => (
+                            <button
+                                key={index}
+                                className={`${activeTab === index ? 'border-b-4 border-b-white' : ''
+                                    } pb-2 transition-all duration-500 text-white uppercase font-barlow-condensed tracking-midllewider hover:border-b-4`}
+                                onClick={() => handleTabClick(index)}
+                            >
+                                {tab.title}
+                            </button>
+                        ))}
+                    </div>
+                    <div className='space-y-2 mb-10'>
+                        <h2 className='font-bellefair text-6xl lg:text-8xl text-white uppercase'>
+                            {activeTabData.title}
+                        </h2>
+                        <p className='text-sm md:text-base lg:text-lg leading-8 text-blue-sky min-h-24'>
+                            {activeTabData.text}
+                        </p>
+                    </div>
+                    <TabInfo info={activeTabData.info} />
+                </div>
+            </div>
         </>
     );
 };
+
