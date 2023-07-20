@@ -54,8 +54,8 @@ export const Tabs = () => {
                             <Image
                                 className="drop-shadow-xl"
                                 src={tab.UrlImage}
-                                width={300}
-                                height={300}
+                                width={170}
+                                height={170}
                                 alt="Imagem hero"
                             />
                         </div>
@@ -65,35 +65,35 @@ export const Tabs = () => {
                                     <button
                                         key={index}
                                         className={`${activeTab === index ? "border-b-4 border-b-white" : ""
-                                            } py-4 transition-all duration-500 text-white uppercase font-barlow-condensed tracking-midllewider hover:border-b-4`}
+                                            } pb-2 transition-all duration-500 text-white uppercase font-barlow-condensed tracking-midllewider hover:border-b-4`}
                                         onClick={() => handleTabClick(index)}
                                     >
                                         {tab.title}
                                     </button>
                                 ))}
                             </div>
-                            <div>
-                                <h2 className='font-bellefair text-8xl text-white uppercase'>
+                            <div className='space-y-2 mb-10'>
+                                <h2 className='font-bellefair text-6xl text-white uppercase'>
                                     {tab.title}
                                 </h2>
-                                <p className="text-base text-blue-sky my-8">
+                                <p className="text-sm md:text-base text-blue-sky">
                                     {tab.text}
                                 </p>
                             </div>
-                            <div className='flex space-x-20 border-t border-t-blue-sky w-full'>
-                                <div className='mt-6'>
-                                    <span className='font-barlow-condensed uppercase text-sm text-blue-sky tracking-midllewider'>
+                            <div className='flex flex-col md:space-x-20 border-t border-t-blue-sky w-full'>
+                                <div className='mt-4'>
+                                    <span className='font-barlow-condensed uppercase text-xs md:text-sm text-blue-sky tracking-midllewider'>
                                         Avg. Distance
                                     </span>
-                                    <h4 className='font-bellefair uppercase text-3xl text-white mt-3'>
+                                    <h4 className='font-bellefair uppercase text-2xl text-white mt-3'>
                                         {tab.info[0]}
                                     </h4>
                                 </div>
-                                <div className='mt-6'>
-                                    <span className='font-barlow-condensed uppercase text-sm text-blue-sky tracking-midllewider'>
+                                <div className='mt-4'>
+                                    <span className='font-barlow-condensed uppercase text-xs md:text-sm text-blue-sky tracking-midllewider'>
                                         Est. travel time
                                     </span>
-                                    <h4 className='font-bellefair uppercase text-3xl text-white mt-3'>
+                                    <h4 className='font-bellefair uppercase text-2xl text-white mt-3'>
                                         {tab.info[1]}
                                     </h4>
                                 </div>
