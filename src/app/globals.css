@@ -15,26 +15,40 @@ body {
 
 }
 
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #d9d9d9;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #5368df;
+    border-radius: 14px;
+}
+
 /* Estilize os bullets de paginação */
-.swiper-pagination-bullet {
-    width: 10px !important;
-    height: 10px !important;
-    background-color: #979797 !important;
-    opacity: 1 !important;
-    border-radius: 50% !important;
+.swiper-container .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #979797;
+    opacity: 1;
+    border-radius: 50%;
     margin: 0 8px !important;
-    /* Espaçamento entre os bullets */
 }
 
 /* Estilize o bullet ativo */
-.swiper-pagination-bullet-active {
-    background-color: #ffffff !important;
-    opacity: 1 !important;
+.swiper-container .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    opacity: 1;
 }
 
-.swiper-pagination-fraction,
-.swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: 370px!important
+/* Posição dos bullets */
+.swiper-container .swiper-pagination-fraction,
+.swiper-container .swiper-pagination-custom,
+.swiper-container .swiper-pagination-horizontal>.swiper-pagination-bullets,
+.swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 370px;
 }

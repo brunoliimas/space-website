@@ -43,7 +43,7 @@ export const Slider = () => {
         <>
             <Swiper
                 autoplay={{
-                    delay: 2000,
+                    delay: 2500,
                     disableOnInteraction: false,
                 }}
                 slidesPerView={1}
@@ -54,7 +54,7 @@ export const Slider = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay, Pagination, Navigation]}
-                className="w-full h-full"
+                className="w-full h-full swiper-container"
             >
                 {teamPeople.map((member, index) => (
                     <SwiperSlide className="px-8" key={index}>
