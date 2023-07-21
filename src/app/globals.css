@@ -7,9 +7,34 @@
 body {
     background-color: #000000;
 }
+
 @layer base {
     html {
         font-family: 'Barlow', system-ui, sans-serif;
     }
 
+}
+
+/* Estilize os bullets de paginação */
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #979797 !important;
+    opacity: 1 !important;
+    border-radius: 50% !important;
+    margin: 0 8px !important;
+    /* Espaçamento entre os bullets */
+}
+
+/* Estilize o bullet ativo */
+.swiper-pagination-bullet-active {
+    background-color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 370px!important
 }

@@ -1,4 +1,4 @@
-import { SliderComponent } from "@/components/crew/slide"
+import { Slider } from "@/components/crew/slider"
 import { links } from "@/components/header/links"
 
 const teamPeople = [
@@ -31,13 +31,13 @@ const teamPeople = [
 export default function Crew() {
     return (
         <>
-            <section className='h-screen w-full bg-crew-pattern bg-cover bg-no-repeat bg-center'>
+            <section className='w-full bg-crew-pattern bg-cover bg-no-repeat bg-center'>
                 <div className="h-full container flex flex-col items-center justify-between lg:justify-end pb-24 pt-40 md:pt-56 lg:flex-row lg:items-end lg:py-36">
                     <div className="w-full flex justify-center md:justify-start space-x-1 font-barlow-condensed tracking-wider text-base mb-8">
                         <span className="text-white opacity-20">{links[2].index}</span>
                         <h2 className="uppercase text-gray-sky">Meet your {links[2].name}</h2>
                     </div>
-                    <SliderComponent teamPeople={teamPeople} />
+                    <Slider />
                 </div>
             </section>
         </>
