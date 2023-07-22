@@ -1,5 +1,6 @@
 import { Slider } from "@/components/crew/slider"
-import { links } from "@/components/header/links"
+import { links } from "@/app/links"
+import { Title } from "@/components/ui/title"
 
 const teamPeople = [
     {
@@ -32,11 +33,8 @@ export default function Crew() {
     return (
         <>
             <section className='h-screen w-full bg-crew-pattern bg-cover bg-no-repeat bg-center'>
-                <div className="container px-6 h-full flex flex-col items-center pt-28 md:pt-44">
-                    <div className="w-full flex justify-center md:justify-start space-x-1 font-barlow-condensed tracking-wider text-base mb-8">
-                        <span className="text-white opacity-20">{links[2].index}</span>
-                        <h2 className="uppercase text-gray-sky">Meet your {links[2].name}</h2>
-                    </div>
+                <div className="h-full container px-6 flex flex-col items-center pt-28 md:pt-44">
+                    <Title description={links[2].description} index={links[2].index} />
                     <Slider />
                 </div>
             </section>

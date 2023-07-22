@@ -1,5 +1,7 @@
 import { Tabs } from "@/components/destination/tabs"
-import { links } from "@/components/header/links"
+import { links } from "@/app/links"
+import { Title } from "@/components/ui/title";
+
 
 const tabsData = [
     {
@@ -31,12 +33,9 @@ const tabsData = [
 export default function Destination() {
     return (
         <>
-            <section className='lg:h-screen w-full bg-destination-pattern bg-cover bg-no-repeat bg-center'>
-                <div className="container px-6 h-full flex flex-col items-center pb-28 pt-28 md:pt-44">
-                    <div className="w-full flex justify-center md:justify-start space-x-1 font-barlow-condensed tracking-wider text-base mb-8">
-                        <span className="text-white opacity-20">{links[1].index}</span>
-                        <h2 className="uppercase text-gray-sky">Pick your {links[1].name}</h2>
-                    </div>
+            <section className='h-screen w-full bg-destination-pattern bg-cover bg-no-repeat bg-center'>
+                <div className="h-full container px-6 flex flex-col items-center pb-28 pt-28 md:pt-44">
+                    <Title description={links[1].description} index={links[1].index} />
                     <Tabs tabsData={tabsData} />
                 </div>
             </section>

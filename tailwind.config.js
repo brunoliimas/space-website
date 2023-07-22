@@ -26,6 +26,7 @@ module.exports = {
         'hero-pattern-90': "url('/home/bg-hero-90.png')",
         'destination-pattern': "url('/destination/bg-destination.png')",
         'crew-pattern': "url('/crew/bg-crew.png')",
+        'tech-pattern': "url('/tech/bg-tech.png')",
       },
       colors: {
         'dark-sky': '#0B0D17',

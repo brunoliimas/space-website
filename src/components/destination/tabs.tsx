@@ -45,10 +45,10 @@ export const Tabs = ({ tabsData }: TabsProps) => {
             <div className='flex flex-col items-center justify-center px-8 lg:flex-row lg:space-x-10'>
                 <div className='w-full flex items-center justify-center mb-12'>
                     <Image
-                        className='drop-shadow-2xl w-80'
+                        className='drop-shadow-2xl w-4/5'
                         src={activeTabData.UrlImage}
-                        width={170}
-                        height={170}
+                        width={270}
+                        height={270}
                         alt='Imagem hero'
                     />
                 </div>
@@ -69,7 +69,7 @@ export const Tabs = ({ tabsData }: TabsProps) => {
                         <h2 className='font-bellefair text-6xl lg:text-8xl text-white uppercase'>
                             {activeTabData.title}
                         </h2>
-                        <p className='text-sm md:text-base lg:text-lg leading-8 text-blue-sky min-h-24'>
+                        <p className='text-base lg:text-lg leading-8 text-blue-sky'>
                             {activeTabData.text}
                         </p>
                     </div>

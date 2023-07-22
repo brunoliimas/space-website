@@ -3,9 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { links } from './links';
+import { links } from '../../app/links';
 import { IoMdClose } from 'react-icons/io';
-import styles from './styles.module.css';
 
 
 type MenuProps = {
@@ -36,7 +35,7 @@ export const Menu = ({ onClose }: MenuProps) => {
 
     return (
         <nav
-            className={`md:hidden ${styles.nav} w-[80%] bg-gray-sky bg-opacity-20 h-screen absolute -top-10 right-0 z-50 ${animate ? (closing ? 'transition-transform duration-500 translate-x-full' : 'transition-transform duration-500 translate-x-0') : 'translate-x-full'
+            className={`md:hidden backdrop-blur-md w-[80%] bg-gray-sky bg-opacity-20 h-screen absolute -top-10 right-0 z-50 ${animate ? (closing ? 'transition-transform duration-500 translate-x-full' : 'transition-transform duration-500 translate-x-0') : 'translate-x-full'
                 }`}
         >
             <div className='mt-28 flex flex-col justify-center'>

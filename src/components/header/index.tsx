@@ -5,9 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu } from "./menu";
-import { links } from './links';
+import { links } from '../../app/links';
 import { FiMenu } from 'react-icons/fi';
-import styles from './styles.module.css';
 
 
 
@@ -32,7 +31,7 @@ export default function Header() {
                 </Link>
                 <nav
                     className={
-                        `hidden ${styles.nav} md:flex items-center md:bg-sky-950 lg:bg-gray-sky md:bg-opacity-20 lg:bg-opacity-20 space-x-6 px-16 lg:space-x-12 pt-10 lg:px-32 before:hidden xl:before:block before:absolute before:top-1/2 before:left-[-65%] lg:before:w-9/12 before:h-[1px] before:bg-white`
+                        `hidden backdrop-blur-md md:flex items-center md:bg-sky-950 lg:bg-gray-sky md:bg-opacity-20 lg:bg-opacity-20 space-x-6 px-16 lg:space-x-12 pt-10 lg:px-32 before:hidden xl:before:block before:absolute before:top-1/2 before:left-[-65%] lg:before:w-9/12 before:h-[1px] before:bg-white`
                     }
                 >
                     {links.map((link, index) => (

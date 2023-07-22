@@ -57,7 +57,7 @@ export const Slider = () => {
                 className="w-full h-full swiper-container"
             >
                 {teamPeople.map((member, index) => (
-                    <SwiperSlide className="px-8 lg:p-0 h-full" key={index}>
+                    <SwiperSlide className="lg:p-0 h-full" key={index}>
                         <div className='md:flex md:flex-col lg:flex-row justify-between items-center lg:items-end h-full'>
                             <div className="w-full md:w-4/5 border-b border-white/20 flex justify-center mb-8 md:mb-0 md:order-2 lg:w-1/2" >
                                 <Image
@@ -75,7 +75,7 @@ export const Slider = () => {
                                 <h2 className="font-bellefair text-white uppercase text-2xl mb-4 md:text-4xl lg:text-6xl">
                                     {member.name}
                                 </h2>
-                                <p className="leading-6 text-blue-sky text-sm md:text-base lg:text-xl">
+                                <p className="text-base lg:text-lg leading-6 text-blue-sky">
                                     {member.description}
                                 </p>
                             </div>
