@@ -31,8 +31,8 @@ const teamPeople = [
 export default function Crew() {
     return (
         <>
-            <section className='w-full bg-crew-pattern bg-cover bg-no-repeat bg-center'>
-                <div className="container px-6 h-full flex flex-col items-center pb-28 pt-28 md:pt-44">
+            <section className='h-screen w-full bg-crew-pattern bg-cover bg-no-repeat bg-center'>
+                <div className="container px-6 h-full flex flex-col items-center pt-28 md:pt-44">
                     <div className="w-full flex justify-center md:justify-start space-x-1 font-barlow-condensed tracking-wider text-base mb-8">
                         <span className="text-white opacity-20">{links[2].index}</span>
                         <h2 className="uppercase text-gray-sky">Meet your {links[2].name}</h2>
