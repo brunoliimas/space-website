@@ -45,7 +45,7 @@ export const Tabs = ({ tabsData }: TabsProps) => {
             <div className='flex flex-col items-center justify-center px-8 lg:flex-row lg:space-x-10'>
                 <div className='w-full flex items-center justify-center mb-12'>
                     <Image
-                        className='drop-shadow-2xl w-4/5'
+                        className='drop-shadow-2xl md:w-3/5 lg:w-4/5'
                         src={activeTabData.UrlImage}
                         width={270}
                         height={270}
