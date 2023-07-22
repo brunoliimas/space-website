@@ -76,6 +76,6 @@ body {
     .swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal {
         top: 710px;
         display: flex;
-        align-items: start;
+        align-items: flex-start;
     }
 }
