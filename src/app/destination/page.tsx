@@ -33,7 +33,7 @@ const tabsData = [
 export default function Destination() {
     return (
         <>
-           <section className='h-screen w-full bg-destination-pattern bg-cover bg-no-repeat bg-center pb-4 lg:pb-0'>
+           <section className='w-full bg-destination-pattern bg-cover bg-no-repeat bg-center pb-4 lg:pb-0'>
                 <div className="h-full container px-6 flex flex-col items-center pt-28 md:pt-44">
                     <Title description={links[1].description} index={links[1].index} />
                     <Tabs tabsData={tabsData} />
