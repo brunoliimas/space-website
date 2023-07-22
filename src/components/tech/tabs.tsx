@@ -36,8 +36,8 @@ export const Tabs = ({ tabsData }: TabsProps) => {
                 {tabsData.map((tab, index) => (
                     <button
                         key={index}
-                        className={`${activeTab === index ? 'bg-white text-sky-950' : ''
-                            } w-10 h-10 rounded-full text-base transition-all duration-500 text-white uppercase font-bellefair tracking-midllewider border border-white border-opacity-20 hover:border-opacity-100 md:h-14 md:w-14 md:text-xl lg:h-20 lg:w-20 lg:text-2xl`}
+                        className={`${activeTab === index ? 'bg-white text-sky-950' : 'bg-transparent text-white'
+                            } w-10 h-10 rounded-full text-base transition-all duration-500 uppercase font-bellefair tracking-midllewider border border-white border-opacity-20 hover:border-opacity-100 md:h-14 md:w-14 md:text-xl lg:h-20 lg:w-20 lg:text-2xl`}
                         onClick={() => handleTabClick(index)}
                     >
                         <span>{index + 1}</span>
